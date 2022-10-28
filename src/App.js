@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { useEffect } from 'react';
+import SearchForm from './components/SearchForm';
+
+
 function App() {
+  
   return (
     <div className="App">
+      <SearchForm />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
