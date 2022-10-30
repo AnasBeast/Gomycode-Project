@@ -3,28 +3,23 @@ import './App.css';
 
 import { useEffect } from 'react';
 import SearchForm from './components/SearchForm';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import Home from './screens/Home';
+import PreferedHotels from './screens/PreferedHotels';
+import PreferedDestinations from './screens/PreferedDestinations';
 
 
 function App() {
   
   return (
-    <div className="App">
-      <SearchForm />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/PreferedDestinations" element={<PreferedDestinations />} />
+        <Route path="/PreferedHotels/:id" element={<PreferedHotels />} />
+      </Routes>
+    </Router>
   );
 }
 
