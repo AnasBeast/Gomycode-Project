@@ -1,14 +1,11 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+
 import {
-  ArrowPathIcon,
-  Bars3Icon,
+
   CloudArrowUpIcon,
   CogIcon,
   LockClosedIcon,
   CurrencyDollarIcon,
   ShieldCheckIcon,
-  XMarkIcon,
   PaperAirplaneIcon,
 } from '@heroicons/react/20/solid'
 import { ArrowTopRightOnSquareIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
@@ -205,7 +202,7 @@ const blogPosts = useSelector(state => state.PreferedHotels)
                     {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                     <img
                       className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="./cover-pic.png"
+                      src="https://i.postimg.cc/x816P3Vk/cover-pic.png"
                       alt=""
                     />
                   </div>
@@ -297,9 +294,9 @@ const blogPosts = useSelector(state => state.PreferedHotels)
                         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                       </svg>
                       <p className="mt-6 text-2xl font-medium text-white">
-                      We would recommend AnasBooking and will be using them again in the future.
+                      We would recommend AnasBooking and will be using them again in the future. <br />
                       Anas and his team gave us excellent service
-                      And have an amazing time
+                      and have an amazing time.
                       </p>
                     </div>
                     <footer className="mt-6">

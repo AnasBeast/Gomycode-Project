@@ -5,10 +5,10 @@ import NavBar from '../components/Navbar'
 import SliderComponent from '../components/Swiper'
 import StarRatingComponent from "react-rating-stars-component";
 
-export default function PreferedHotels() {
+export default function Hotel() {
   const {id} = useParams();
-  const blogPosts = useSelector(state => state.PreferedHotels)
-  const [Hotel , setHotel] = useState(blogPosts.find((blog)=>blog.id==id))
+  const SearchHotels = useSelector(state => state.SearchHotels)
+  const [Hotel , setHotel] = useState(SearchHotels.find((hotel)=>hotel.id==id))
 
   return (
     <div className='bg-white'>
@@ -22,16 +22,16 @@ export default function PreferedHotels() {
               <div className="w-full">
                 <div className="relative">
                   
-                  <SliderComponent images={Hotel.images}/>
+                  <SliderComponent images={Hotel.optimizedThumbUrls.srpDesktop}/>
                   <span className="absolute inset-0 rounded shadow-inner" aria-hidden="true" />
                 </div>
               </div>
               <div className='self-start'>
-                <h1 className="text-2xl font-bold text-gray-900">{Hotel.title}</h1>
+                <h1 className="text-2xl font-bold text-gray-900">{Hotel.name}</h1>
                 <p className="text-sm font-medium text-gray-500">
                   
                   <a href="#" className="text-gray-900">
-                    {Hotel.category.name}
+                    {Hotel.neighbourhood}
                   </a>
                 </p>
               </div>
@@ -54,7 +54,7 @@ export default function PreferedHotels() {
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">Details</dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          {Hotel.preview}
+                          {Hotel.details}
                         </dd>
                       </div>
                       
@@ -69,12 +69,12 @@ export default function PreferedHotels() {
                   <div className="divide-y divide-gray-200">
                     <div className="px-4 py-5 sm:px-6">
                       <h2 id="notes-title" className="text-lg font-medium text-gray-900">
-                        Notes
+                        Reviews
                       </h2>
                     </div>
                     <div className="px-4 py-6 sm:px-6">
                       <ul role="list" className="space-y-8">
-                        {Hotel.notes.map((note) => (
+                        {Hotel.reviews.map((note) => (
                           <li key={note.name}>
                             <div className="flex space-x-3">
                               
@@ -95,13 +95,13 @@ export default function PreferedHotels() {
                                     />
                                 </div>
                                 <div className="mt-1 text-sm text-gray-700">
-                                  <p>{note.feedback}</p>
+                                  <p>{note.note}</p>
                                 </div>
                                 
                               </div>
                             </div>
                           </li>
-                        ))}
+                        ))} 
                       </ul>
                     </div>
                   </div>
@@ -112,14 +112,14 @@ export default function PreferedHotels() {
             <section aria-labelledby="timeline-title" className="lg:col-span-1 lg:col-start-3">
               <div className="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
                 <h2 id="timeline-title" className="text-lg font-medium text-gray-900">
-                  Feedback
+                  Rating
                 </h2>
                 {/* Activity Feed */}
                 <div className="mt-6 flow-root">
                   <StarRatingComponent
                     starCount={5}
                     size={24}
-                    value={Hotel.stars}
+                    value={Hotel.starRating}
                     edit={false}
                     isHalf={true}
                     />

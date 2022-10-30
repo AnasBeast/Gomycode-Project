@@ -1,95 +1,26 @@
 
-import { Fragment, useState } from 'react'
-import { Disclosure, Listbox, Menu, Transition } from '@headlessui/react'
+import { useState } from 'react'
 import {
-  ArrowLongLeftIcon,
-  ArrowLongRightIcon,
-  BriefcaseIcon,
-  CalendarIcon,
   CheckCircleIcon,
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  CurrencyDollarIcon,
-  EnvelopeIcon,
-  LinkIcon,
-  MagnifyingGlassIcon,
-  MapPinIcon,
-  PencilIcon,
 } from '@heroicons/react/20/solid'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import NavBar from '../components/Navbar'
 import StarRatingComponent from "react-rating-stars-component";
 import {useSelector} from "react-redux"
+import { Link } from 'react-router-dom'
 
-const user = {
-  name: 'Whitney Francis',
-  email: 'whitney.francis@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Jobs', href: '#', current: false },
-  { name: 'Applicants', href: '#', current: false },
-  { name: 'Company', href: '#', current: false },
-]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
-const tabs = [
-  { name: 'Applied', href: '#', count: '2', current: false },
-  { name: 'Phone Screening', href: '#', count: '4', current: false },
-  { name: 'Interview', href: '#', count: '6', current: true },
-  { name: 'Offer', href: '#', current: false },
-  { name: 'Disqualified', href: '#', current: false },
-]
-const candidates = [
-  {
-    name: 'Emily Selman',
-    email: 'emily.selman@example.com',
-    imageUrl:
-      'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    applied: 'January 7, 2020',
-    appliedDatetime: '2020-07-01T15:34:56',
-    status: 'Completed phone screening',
-    text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsam amet excepturi expedita consectetur cumque repellat dolores dolorem adipisci enim?"
-  },
-  // More candidates...
-]
-const publishingOptions = [
-  { name: 'Published', description: 'This job posting can be viewed by anyone who has the link.', current: true },
-  { name: 'Draft', description: 'This job posting will no longer be publicly accessible.', current: false },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function PreferedDestinations() {
-  const [selected, setSelected] = useState(publishingOptions[0])
-
   const state = useSelector(state=>state.PreferedDestinations)
   console.log(state)
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         {/* Navbar */}
         <NavBar/>
         <main className="pt-8 pb-16">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="px-4 sm:px-0">
-              <h2 className="text-lg font-medium text-gray-900">TOP DESTINATIONS FOR 2022</h2>
+            <div className="px-4 sm:px-0 mb-4">
+              <h2 className="text-xl font-medium text-gray-900">TOP DESTINATIONS FOR 2022</h2>
             </div>
 
             {/* Stacked list */}
@@ -134,15 +65,21 @@ export default function PreferedDestinations() {
                         />
                       </div>
                       <div>
-                      
                       </div>
                     </div>
                   </a>
                 </li>
               ))}
             </ul>
-
-            
+          </div>
+          <div className='mx-auto mt-8 max-w-3xl sm:px-6 lg:max-w-7xl w-full'>
+            <Link
+            to={"/"}
+            type="button"
+            className="w-full text-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+                Back To Homepage
+            </Link>
           </div>
         </main>
       </div>
