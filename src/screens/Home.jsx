@@ -230,7 +230,7 @@ const blogPosts = useSelector(state => state.PreferedHotels)
               <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
                 <img
                   className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                  src="../plan-pic.png"
+                  src="https://i.postimg.cc/ZK2JXHzK/best-websites-to-plan-your-trip.jpg"
                   alt=""
                 />
               </div>
