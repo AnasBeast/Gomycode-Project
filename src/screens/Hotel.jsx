@@ -9,6 +9,7 @@ export default function Hotel() {
   const {id} = useParams();
   const SearchHotels = useSelector(state => state.SearchHotels)
   const [Hotel , setHotel] = useState(SearchHotels.find((hotel)=>hotel.id==id))
+  document.title = `AnasBooking | ${Hotel.name}`
 
   return (
     <div className='bg-white'>
@@ -123,6 +124,24 @@ export default function Hotel() {
                     edit={false}
                     isHalf={true}
                     />
+                </div>
+              </div>
+
+              <div className="bg-white px-4 py-5 my-4 shadow sm:rounded-lg sm:px-6">
+                <h2 id="timeline-title" className="text-lg font-medium text-gray-900">
+                  Address
+                </h2>
+                {/* Activity Feed */}
+                <div className="mt-6 flow-root">
+                  <h1 className="text-md font-medium text-gray-700">
+                    {Hotel.address.streetAddress}, {Hotel.address.locality}, {Hotel.address.postalCode}
+                  </h1>
+                  <iframe src={Hotel.address.location}
+                  width="100%" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                  className='border mt-2'
+                  >
+
+                  </iframe>
                 </div>
               </div>
             </section>

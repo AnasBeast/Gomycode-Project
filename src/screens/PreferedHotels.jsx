@@ -9,6 +9,7 @@ export default function PreferedHotels() {
   const {id} = useParams();
   const blogPosts = useSelector(state => state.PreferedHotels)
   const [Hotel , setHotel] = useState(blogPosts.find((blog)=>blog.id==id))
+  document.title = `AnasBooking | ${Hotel.title}`
 
   return (
     <div className='bg-white'>

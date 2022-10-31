@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Hotels() {
+  document.title = `AnasBooking | Hotels`
   const [hotels , setHotels] = useState(useSelector(state => state.SearchHotels))
   console.log(hotels)
   return (

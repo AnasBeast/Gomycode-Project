@@ -7,20 +7,32 @@ import NavBar from '../components/Navbar'
 import StarRatingComponent from "react-rating-stars-component";
 import {useSelector} from "react-redux"
 import { Link } from 'react-router-dom'
+import SideBar from '../components/SideBar';
 
 
 export default function PreferedDestinations() {
+  document.title = `AnasBooking | Prefered Destinations`
   const state = useSelector(state=>state.PreferedDestinations)
+  const [open, setOpen] = useState(false)
+
   console.log(state)
   return (
     <>
       <div className="min-h-full">
         {/* Navbar */}
         <NavBar/>
+        <SideBar open={open} setOpen={setOpen}/>
         <main className="pt-8 pb-16">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="px-4 sm:px-0 mb-4">
+            <div className="px-4 sm:px-0 mb-4 flex justify-between items-center">
               <h2 className="text-xl font-medium text-gray-900">TOP DESTINATIONS FOR 2022</h2>
+              <button
+                type="button"
+                className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                onClick={()=>setOpen(true)}
+              >
+                Add your favourite destination
+              </button>
             </div>
 
             {/* Stacked list */}

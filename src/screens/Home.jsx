@@ -138,7 +138,8 @@ const footerNavigation = {
 }
 
 export default function Home() {
-const blogPosts = useSelector(state => state.PreferedHotels)
+  document.title = "AnasBooking | Home"
+  const blogPosts = useSelector(state => state.PreferedHotels)
 
   return (
     <div className="bg-white">

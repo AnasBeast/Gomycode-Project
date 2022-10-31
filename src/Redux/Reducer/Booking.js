@@ -1,4 +1,4 @@
-import { SEARCHHOTELS } from "../Constants/Action_type";
+import { ADDDESTINATION, SEARCHHOTELS } from "../Constants/Action_type";
 
 
 let initialstate = {
@@ -132,7 +132,7 @@ let initialstate = {
             rating : 5,
         },
         {
-            id : 3,
+            id : 3.1,
             name : "Rhodes",
             imageUrl : "https://media.mitsishotels.com/uploads/2020/06/rhodes-lindos-shutterstock-381824248-wxga.jpg",
             country : "Greece",
@@ -195,6 +195,7 @@ let initialstate = {
                 "region": "Nabeul",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.3641754056534!2d10.57732235120931!3d36.40038339770385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd61872aa5de09%3A0x2721024924f90350!2sThe%20Orangers%20Garden%20Villas%20%26%20Bungalows!5e0!3m2!1sen!2stn!4v1667253264847!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -284,6 +285,7 @@ let initialstate = {
                 "region": "Monastir",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12949.61992149443!2d10.7558064!3d35.7654271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13020dee7acb5b4d%3A0xad544cfc7ea1a206!2sIberostar%20Selection%20Kuriat%20Palace!5e0!3m2!1sen!2stn!4v1667252994316!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -338,7 +340,7 @@ let initialstate = {
             "optimizedThumbUrls": {
                 "srpDesktop": ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/221768875.jpg?k=60bdd96a85faf2bacb98e95072f56b9d4fcecaac922eddde074e1d2c7fd808c3&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/206043974.jpg?k=abfaf63b3bc5d4788029ebc00f56b87c612b00eaa5b5d37f54af4e73aa989c00&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/333547862.jpg?k=80b2bec6d6f0d0378cced26436ddcfa177b188b25c742462ea8b27facca4f84f&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221769074.jpg?k=6f72781c5abbc5e31ca758177cab7ef9ecf99294c508c68244e5b382840faf41&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221767594.jpg?k=b665dac3e52b7f9e7d72a418307e47defd572ffa82d23146c727d0ea49ecb52b&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221771607.jpg?k=cba282e1b9e08bcc74cede0ff2c70dccc97a92eed5a5cca7b892bcd8dc4b781b&o=&hp=1" , "https://cf.bstatic.com/xdata/images/hotel/max1024x768/206044002.jpg?k=f6f5c9819b0467c7814e8677f64361da4ce65cd34f6ca82d1f8c6e195251f838&o=&hp=1"]
             },
-            "review" : [
+            "reviews" : [
                 {
                     name : "Veronika",
                     note : "“great location, amazing staff, delicious food, sea view. kids pool with water slides, great evening entertainment.”",
@@ -381,6 +383,7 @@ let initialstate = {
                 "region": "Mahdia",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.66323479534!2d11.047502251192709!3d35.51260454671119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130223ea60513759%3A0x7e21f589496e6b8f!2sIberostar%20Selection%20Royal%20El%20Mansour!5e0!3m2!1sen!2stn!4v1667253316718!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -472,6 +475,7 @@ let initialstate = {
                 "region": "Nabeul",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.283517092334!2d10.634291967336212!3d36.40233523363677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13029e0d8e674ac7%3A0x3f5e4d0655c4cb69!2sRadisson%20Blu%20Resort%20%26%20Thalasso%2C%20Hammamet!5e0!3m2!1sen!2stn!4v1667253351363!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -552,6 +556,7 @@ let initialstate = {
                 "region": "Sousse",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.8065938394307!2d10.586524751199924!3d35.902752225300176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd899624d737a5%3A0xe702c75e2cb4e186!2sHotel%20Iberostar%20Diar%20El%20Andalous!5e0!3m2!1sen!2stn!4v1667253381252!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -643,6 +648,7 @@ let initialstate = {
                 "region": "Tunis",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.8923441153347!2d10.279205951217806!3d36.845054272774085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd4bc450b1d75b%3A0xd2193a727520a972!2sNovotel%20Tunis%20Lac!5e0!3m2!1sen!2stn!4v1667253407243!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -723,6 +729,7 @@ let initialstate = {
                 "region": "Sousse",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.7074219965602!2d10.72946105121007!3d36.44045679546776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130298c2618ed683%3A0x153c52eb7453341c!2sH%C3%B4tel%20Khayam%20Garden%20Beach%20Resort%20and%20Spa!5e0!3m2!1sen!2stn!4v1667253430755!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -812,6 +819,7 @@ let initialstate = {
                 "region": "Djerba",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.272776943443!2d11.003488366885358!3d33.831075374778614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aa978c4297c42f%3A0xf99ff9bd5e73f6d2!2sDjerba%20Plaza%20Thalasso%20and%20Spa!5e0!3m2!1sen!2stn!4v1667253458029!5m2!1sen!2stn",
                 "obfuscate": false
             },
             "welcomeRewards": {
@@ -912,6 +920,7 @@ let initialstate = {
                 "region": "Béja",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.066188645837!2d9.078938851220432!3d36.98435326491223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e4ac8ce49ed0fd%3A0x86a452d9538df594!2sHotel%20Alrawabi!5e0!3m2!1sen!2stn!4v1667253490236!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Nefza",
@@ -945,6 +954,7 @@ let initialstate = {
                 "region": "Ariana",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.154318941912!2d10.157997751218097!3d36.86272487177814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2ccad665537dd%3A0x535dc4977eb31ede!2sThe%20Penthouse!5e0!3m2!1sen!2stn!4v1667253517832!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Ariana",
@@ -990,6 +1000,7 @@ let initialstate = {
                 "region": "Ben Arous",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.0328174690176!2d10.180568267411848!3d36.817733510074405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd3489c5b2fa0d%3A0xb6c7181c2970c096!2sH%C3%B4tel%20Marigold!5e0!3m2!1sen!2stn!4v1667253543124!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Ben Arous",
@@ -1029,6 +1040,7 @@ let initialstate = {
                 "region": "Mannouba",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.3159633211153!2d10.162447351217164!3d36.81094787469501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd33842a1fdd53%3A0xdd8fc6623e783d24!2z2YbYstmEINi12KfYrdioINin2YTYt9in2KjYuSAtIEjDtHRlbCBTYWhlYiBFdHRhYmFh!5e0!3m2!1sen!2stn!4v1667253571323!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Mannouba",
@@ -1063,6 +1075,7 @@ let initialstate = {
                 "region": "Bizerte",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.986391634322!2d9.870316851226468!3d37.29545634726428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e31e46a9c84d71%3A0x4eb02384f1f434f0!2sR%C3%A9sidence%20Ain%20Meriem%20Bizerte!5e0!3m2!1sen!2stn!4v1667253600634!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Bizerte",
@@ -1101,6 +1114,7 @@ let initialstate = {
                 "region": "Jendouba",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.0728416223465!2d8.577870751216333!3d36.76881997706611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fb242c2c73b9c9%3A0xcf1c9c644130efc1!2sEl%20Mouradi%20Hammam%20Bourguiba!5e0!3m2!1sen!2stn!4v1667253623931!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Ain Draham",
@@ -1134,6 +1148,7 @@ let initialstate = {
                 "region": "Zaghouan",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.609735801125!2d10.268888851213337!3d36.61170728588819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd475b53788313%3A0x6a2b04a927e19bd1!2sDar%20Salima!5e0!3m2!1sen!2stn!4v1667253650643!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Al Khulaydiyah",
@@ -1167,6 +1182,7 @@ let initialstate = {
                 "region": "Sousse",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.2629023695176!2d10.625084051198805!3d35.84255652861659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13027584510f3853%3A0x4a2185abf6d1d7c9!2sM%C3%B6venpick%20Sousse!5e0!3m2!1sen!2stn!4v1667253677123!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Sousse",
@@ -1205,6 +1221,7 @@ let initialstate = {
                 "region": "Kasserine",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.4662396588756!2d9.109489251187785!3d35.244654961301016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f94a22a55d3f37%3A0x9aeeab720e531036!2sHotel%20Sufetula!5e0!3m2!1sen!2stn!4v1667253696819!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Subaytilah",
@@ -1238,6 +1255,7 @@ let initialstate = {
                 "region": "Kairouan",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.892501665316!2d10.097191951195784!3d35.6796488375683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fdc546c22c3ec7%3A0x22463a0da446a27b!2sHotel%20La%20Kasbah!5e0!3m2!1sen!2stn!4v1667253725581!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Kairouan",
@@ -1271,6 +1289,7 @@ let initialstate = {
                 "region": "Gafsa",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.6452608470527!2d8.741610851173125!3d34.43576480477238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f896fc0ec74d39%3A0xdc6a080a8cf92f6e!2sHotel%20Jugurtha%20Palace!5e0!3m2!1sen!2stn!4v1667253748179!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Gafsa",
@@ -1304,6 +1323,7 @@ let initialstate = {
                 "region": "Sfax",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.978992959403!2d10.763352151178426!3d34.730923889009716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002d2e0853ccb1%3A0x519a81a50253a5f0!2sLes%20Oliviers%20Palace!5e0!3m2!1sen!2stn!4v1667253770164!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Sfax",
@@ -1337,6 +1357,7 @@ let initialstate = {
                 "region": "Gabès",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9760585137924!2d10.113177951163516!3d33.89027043360005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12556f9163ac99d3%3A0xbf77854965a36117!2sHotel%20l&#39;Oasis%20Gabes!5e0!3m2!1sen!2stn!4v1667253793451!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Gabès",
@@ -1370,6 +1391,7 @@ let initialstate = {
                 "region": "Médenine",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.9017778714!2d11.01776315116125!3d33.7632039402582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aa9663f532155d%3A0xed8eec6db9fc785d!2sSENTIDO%20Palm%20Azur!5e0!3m2!1sen!2stn!4v1667253825474!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Aghir",
@@ -1403,6 +1425,7 @@ let initialstate = {
                 "region": "Tozeur",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.001858834394!2d8.115775751163921!3d33.91535173228327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1257c029520009cf%3A0xcb6e092a5b229615!2sPalm%20Beach%20Palace!5e0!3m2!1sen!2stn!4v1667253850699!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Tozeur",
@@ -1436,6 +1459,7 @@ let initialstate = {
                 "region": "Kebili",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405060.1642276663!2d8.30016412294506!3d33.546774643318905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x125687f3ffffffdd%3A0xf635c36ff8fdbea8!2sSahara%20Douz!5e0!3m2!1sen!2stn!4v1667253908526!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Douz",
@@ -1469,6 +1493,7 @@ let initialstate = {
                 "region": "Ttataouine",
                 "countryName": "Tunisia",
                 "countryCode": "tn",
+                "location" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.340261172624!2d10.370611966736409!3d32.94202482166022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1254b9724fdef40b%3A0x133f1bf22e7d0d48!2sHotel%20Dakyanus!5e0!3m2!1sen!2stn!4v1667253933851!5m2!1sen!2stn",
                 "obfuscate": false
             },
             neighbourhood: "Tataouine",
@@ -1500,7 +1525,12 @@ export const BookingReducer = (state = initialstate , action) =>{
             return{
                 SearchHotels : state.SearchHotels
             }
-
+        case ADDDESTINATION:
+            payload.id = state.PreferedDestinations[state.PreferedDestinations.length-1].id + 1;
+            state.PreferedDestinations.push(payload)
+            return{
+                PreferedDestinations : state.PreferedDestinations
+            }
         default: return state;
 
     }
