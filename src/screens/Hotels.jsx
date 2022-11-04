@@ -5,6 +5,7 @@ import SearchForm from '../components/SearchForm'
 import StarRatingComponent from "react-rating-stars-component";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export default function Hotels() {
   document.title = `AnasBooking | Hotels`
@@ -71,6 +72,7 @@ export default function Hotels() {
             ))}
             </ul>
         </div>
+        <Footer/>
     </div>
   )
 }

@@ -63,7 +63,8 @@ export default function SideBar({open,setOpen}) {
     const [countryName , setCountryName] = useState();
     const [description , setDescription] = useState();
     const [rating , setRating] = useState();
-    const [imageUrl , setImageUrl] = useState();
+    const [imageUrl , setImageUrl] = useState([]);
+    const [videoUrl , setVideoUrl] = useState();
     const dispatch = useDispatch()
     const [show, setShow] = useState(false)
 
@@ -75,6 +76,7 @@ export default function SideBar({open,setOpen}) {
             imageUrl : imageUrl,
             country : countryName,
             note : description,
+            video : videoUrl,
             rating : parseFloat(rating)
         };
         dispatch(addDestination(destination));
@@ -201,7 +203,22 @@ export default function SideBar({open,setOpen}) {
                                   name="image-url"
                                   id="image-url"
                                   className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                  onChange={(e)=>setImageUrl(e.target.value)}
+                                  onChange={(e)=>setImageUrl([e.target.value])}
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <label htmlFor="video-url" className="block text-sm font-medium text-gray-900">
+                                Embed Youtube Video ID
+                              </label>
+                              <div className="mt-1">
+                                <input
+                                  type="text"
+                                  name="video-url"
+                                  id="video-url"
+                                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                  onChange={(e)=>setVideoUrl(e.target.value)}
                                   required
                                 />
                               </div>

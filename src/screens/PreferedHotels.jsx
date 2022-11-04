@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {useSelector} from "react-redux"
 import NavBar from '../components/Navbar'
 import SliderComponent from '../components/Swiper'
 import StarRatingComponent from "react-rating-stars-component";
+import Footer from '../components/Footer'
 
 export default function PreferedHotels() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+  }, [])
+  
   const {id} = useParams();
   const blogPosts = useSelector(state => state.PreferedHotels)
   const [Hotel , setHotel] = useState(blogPosts.find((blog)=>blog.id==id))
@@ -138,6 +144,7 @@ export default function PreferedHotels() {
             </Link>
           </div>
         </main>
+        <Footer/>
       </div>
     </div>
   )

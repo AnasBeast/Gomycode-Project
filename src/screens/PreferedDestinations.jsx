@@ -8,6 +8,7 @@ import StarRatingComponent from "react-rating-stars-component";
 import {useSelector} from "react-redux"
 import { Link } from 'react-router-dom'
 import SideBar from '../components/SideBar';
+import Footer from '../components/Footer';
 
 
 export default function PreferedDestinations() {
@@ -39,7 +40,7 @@ export default function PreferedDestinations() {
             <ul role="list" className="mt-5 divide-y divide-gray-200 border-t border-gray-200 sm:mt-0 sm:border-t-0">
               {state.map((state) => (
                 <li key={state.id} className="mb-4">
-                  <a href="#" className="group block">
+                  <Link to={`/PreferedDestination/${state.id}`} className="group block">
                     <div className="flex items-center py-5 px-4 sm:py-6 sm:px-0 shadow-md border hover:shadow-lg">
                       <div className="flex min-w-0 flex-1 items-center px-4">
                         <div className="flex-shrink-0">
@@ -79,7 +80,7 @@ export default function PreferedDestinations() {
                       <div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,6 +95,7 @@ export default function PreferedDestinations() {
             </Link>
           </div>
         </main>
+        <Footer/>
       </div>
     </>
   )

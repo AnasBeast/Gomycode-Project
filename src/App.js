@@ -1,8 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 
-import { useEffect } from 'react';
-import SearchForm from './components/SearchForm';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Home from './screens/Home';
@@ -10,6 +7,8 @@ import PreferedHotels from './screens/PreferedHotels';
 import PreferedDestinations from './screens/PreferedDestinations';
 import Hotels from './screens/Hotels';
 import Hotel from './screens/Hotel';
+import PreferedDestination from './screens/PreferedDestination';
+import Aboutus from './screens/Aboutus';
 
 
 function App() {
@@ -22,6 +21,8 @@ function App() {
         <Route path="/Hotels" element={<Hotels />} />
         <Route path="/Hotel/:id" element={<Hotel />} />
         <Route path="/PreferedHotels/:id" element={<PreferedHotels />} />
+        <Route path="/PreferedDestination/:id" element={<PreferedDestination />} />
+        <Route path='/Aboutus' element={<Aboutus/>} />
       </Routes>
     </Router>
   );

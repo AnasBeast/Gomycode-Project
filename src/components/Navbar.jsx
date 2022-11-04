@@ -2,28 +2,23 @@ import React from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import {
-    ArrowPathIcon,
+    
     Bars3Icon,
-    CloudArrowUpIcon,
-    CogIcon,
-    LockClosedIcon,
-    CurrencyDollarIcon,
-    ShieldCheckIcon,
     XMarkIcon,
-    PaperAirplaneIcon,
+    
 } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom'
 
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Prefered Destinations', href: '/PreferedDestinations' },
     { name: 'Hotels', href: '/Hotels' },
-    { name: 'About us', href: '#' },
+    { name: 'About us', href: '/Aboutus' },
 ]
 
 
 const NavBar = () => {
   return (
-    <div>
         <Popover as="header" className="relative">
             <div className="bg-gray-900 py-6">
             <nav
@@ -32,14 +27,14 @@ const NavBar = () => {
             >
                 <div className="flex flex-1 items-center">
                 <div className="flex w-full items-center justify-between md:w-auto">
-                    <a href="#">
+                    <Link to={"/"}>
                     <span className="sr-only">AnasBooking</span>
                     <img
                         className="h-8 w-auto sm:h-10"
-                        src="https://i.postimg.cc/Y0QNtJFt/site-logo.png"
-                        alt=""
+                        src="https://i.postimg.cc/T2WLwdnP/site-logo.png"
+                        alt="logo"
                     />
-                    </a>
+                    </Link>
                     <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
                         <span className="sr-only">Open main menu</span>
@@ -86,7 +81,7 @@ const NavBar = () => {
                     <div>
                     <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
+                        src="https://i.postimg.cc/4ytmFPXc/site-logo2.png"
                         alt=""
                     />
                     </div>
@@ -109,21 +104,13 @@ const NavBar = () => {
                         </a>
                     ))}
                     </div>
-                    <div className="mt-6 px-5">
-                    <a
-                        href="#"
-                        className="block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
-                    >
-                        Start free trial
-                    </a>
-                    </div>
+                    
                     
                 </div>
                 </div>
             </Popover.Panel>
             </Transition>
         </Popover>
-  </div>
   )
 }
 

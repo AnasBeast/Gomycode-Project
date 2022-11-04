@@ -6,15 +6,18 @@ import SliderComponent from '../components/Swiper'
 import StarRatingComponent from "react-rating-stars-component";
 import Footer from '../components/Footer'
 
-export default function Hotel() {
-  const {id} = useParams();
-  const SearchHotels = useSelector(state => state.SearchHotels)
-  const [Hotel , setHotel] = useState(SearchHotels.find((hotel)=>hotel.id==id))
-  document.title = `AnasBooking | ${Hotel.name}`
+export default function PreferedDestination() {
   useEffect(() => {
     window.scrollTo(0, 0);
 
   }, [])
+  
+  const {id} = useParams();
+  const blogPosts = useSelector(state => state.PreferedDestinations)
+  const [Destination , setDestination] = useState(blogPosts.find((blog)=>blog.id==id))
+  console.log(Destination)
+  document.title = `AnasBooking | ${Destination.name}`
+
   return (
     <div className='bg-white'>
       <div className="relative overflow-hidden">
@@ -27,16 +30,16 @@ export default function Hotel() {
               <div className="w-full">
                 <div className="relative">
                   
-                  <SliderComponent images={Hotel.optimizedThumbUrls.srpDesktop}/>
+                  <SliderComponent images={Destination.imageUrl}/>
                   <span className="absolute inset-0 rounded shadow-inner" aria-hidden="true" />
                 </div>
               </div>
               <div className='self-start'>
-                <h1 className="text-2xl font-bold text-gray-900">{Hotel.name}</h1>
+                <h1 className="text-2xl font-bold text-gray-900">{Destination.name}</h1>
                 <p className="text-sm font-medium text-gray-500">
-                  
-                  <a href="#" className="text-gray-900">
-                    {Hotel.neighbourhood}
+
+                  <a href="#" className="text-gray-900 hover:underline">
+                    {Destination.country}
                   </a>
                 </p>
               </div>
@@ -50,16 +53,16 @@ export default function Hotel() {
                 <div className="bg-white shadow sm:rounded-lg">
                   <div className="px-4 py-5 sm:px-6">
                     <h2 id="applicant-information-title" className="text-lg font-medium leading-6 text-gray-900">
-                      Hotel Information
+                      Destination Information
                     </h2>
-                    <p className="mt-1 max-w-2xl text-sm text-gray-500">Hotel details and informations.</p>
+                    <p className="mt-1 max-w-2xl text-sm text-gray-500">Destination details and informations.</p>
                   </div>
                   <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">Details</dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          {Hotel.details}
+                          {Destination.note}
                         </dd>
                       </div>
                       
@@ -74,40 +77,12 @@ export default function Hotel() {
                   <div className="divide-y divide-gray-200">
                     <div className="px-4 py-5 sm:px-6">
                       <h2 id="notes-title" className="text-lg font-medium text-gray-900">
-                        Reviews
+                        Video
                       </h2>
                     </div>
                     <div className="px-4 py-6 sm:px-6">
-                      <ul role="list" className="space-y-8">
-                        {Hotel.reviews.map((note) => (
-                          <li key={note.name}>
-                            <div className="flex space-x-3">
-                              
-                              <div>
-                                <div className="flex items-start gap-4">
-                                  <div className="text-sm">
-                                    <a href="#" className="font-medium text-gray-900">
-                                      {note.name}
-                                    </a>
-                                    <span className='text-gray-600'><br /> A Client</span>
-                                  </div>
-                                  <StarRatingComponent
-                                    starCount={5}
-                                    size={18}
-                                    value={note.review}
-                                    edit={false}
-                                    isHalf={true}
-                                    />
-                                </div>
-                                <div className="mt-1 text-sm text-gray-700">
-                                  <p>{note.note}</p>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </li>
-                        ))} 
-                      </ul>
+                      <iframe className='mx-auto' width="100%" height="430" src={`https://www.youtube.com/embed/${Destination.video}`} title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                     
                     </div>
                   </div>
                 </div>
@@ -124,28 +99,10 @@ export default function Hotel() {
                   <StarRatingComponent
                     starCount={5}
                     size={24}
-                    value={Hotel.starRating}
+                    value={Destination.rating}
                     edit={false}
                     isHalf={true}
                     />
-                </div>
-              </div>
-
-              <div className="bg-white px-4 py-5 my-4 shadow sm:rounded-lg sm:px-6">
-                <h2 id="timeline-title" className="text-lg font-medium text-gray-900">
-                  Address
-                </h2>
-                {/* Activity Feed */}
-                <div className="mt-6 flow-root">
-                  <h1 className="text-md font-medium text-gray-700">
-                    {Hotel.address.streetAddress}, {Hotel.address.locality}, {Hotel.address.postalCode}
-                  </h1>
-                  <iframe src={Hotel.address.location}
-                  width="100%" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                  className='border mt-2'
-                  >
-
-                  </iframe>
                 </div>
               </div>
             </section>
