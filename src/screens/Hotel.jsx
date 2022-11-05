@@ -43,7 +43,7 @@ export default function Hotel() {
             </div>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3 px-4">
             <div className="space-y-6 lg:col-span-2 lg:col-start-1">
               {/* Description list*/}
               <section aria-labelledby="applicant-information-title">
@@ -150,7 +150,7 @@ export default function Hotel() {
               </div>
             </section>
           </div>
-          <div className='mx-auto mt-8 max-w-3xl sm:px-6 lg:max-w-7xl w-full'>
+          <div className='mx-auto mt-8 max-w-3xl sm:px-6 lg:max-w-7xl w-full px-4'>
             <Link
             to={"/"}
             type="button"

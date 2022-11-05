@@ -36,7 +36,8 @@ const Aboutus = () => {
   ]
   return (
     <div>
-        <header className="relative bg-sky-800 pb-24 sm:pb-32">
+      <header className="relative bg-sky-800 pb-24 sm:pb-32">
+
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
@@ -51,7 +52,7 @@ const Aboutus = () => {
         <NavBar/>
         
 
-        <div className="relative mx-auto max-w-md px-4 pt-24 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="relative mx-auto max-w-md px-4 mt-24 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8 z-10">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>
           <p className="mt-6 max-w-3xl text-xl text-cyan-100">
             Get in touch with AnasBooking via our <br /> Email: boussehminea@gmail.com <br /> Phone: +216 93 022 210

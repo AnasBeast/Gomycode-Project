@@ -17,7 +17,7 @@ export default function Hotels() {
         <div className="font-sans text-black w-full mx-auto bg-white">
            <SearchForm setHotels={setHotels}/>
         </div>
-        <div className='mx-40'>
+        <div className='mx-auto'>
         <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {hotels.map((hotel) => (
                 <li

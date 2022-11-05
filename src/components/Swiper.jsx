@@ -21,7 +21,7 @@ export default function SliderComponent({images}) {
                 {images.map((image,index)=>(
                     <SwiperSlide key={index}>
                         <img
-                            className="h-[600px] w-full rounded"
+                            className="h-3/4 md:h-[600px] w-full rounded"
                             src={image}
                             alt="image slide 1"
                         />
